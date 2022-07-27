@@ -11,7 +11,7 @@ const galleryItemsMarkup = galleryItems
       class="gallery__image"
       src=${preview}
       data-source=${original}
-      alt=${description}
+      alt="${description}"
     />
   </a>
 </div>`;
@@ -25,6 +25,7 @@ function handelClickImg(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
+  // console.log(event.target.alt);
   function onEscKeyPress(event) {
     if (event.code === "Escape") {
       instance.close();
